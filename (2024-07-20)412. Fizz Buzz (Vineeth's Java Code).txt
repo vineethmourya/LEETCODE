@@ -1,0 +1,60 @@
+412. Fizz Buzz
+FULL CODE:
+class Solution {
+    public List<String> fizzBuzz(int n) {
+        //String[] str1= new String[n];
+        List<String> list1 = new LinkedList<>();
+        for(int i=1;i<=n;i++)
+        {
+            if (i%3==0 && i%5==0)
+            {
+                //str1[i] = "FizzBuzz";
+                list1.add("FizzBuzz");
+            } else if (i%3==0)
+            {
+                //str1[i] = "Fizz";
+                list1.add("Fizz");
+            } 
+            else if (i%5==0)
+            {
+                //str1[i] = "Buzz";
+                list1.add("Buzz");
+            }
+            else
+            {
+                //str1[i] = String.valueOf(i);
+                list1.add(String.valueOf(i));
+                //list1.add(i); 
+            }
+        }
+        return list1;
+        
+    }
+}
+
+COMPACT CODE (REMOVED COMMENTS):
+class Solution {
+    public List<String> fizzBuzz(int n) {
+        List<String> list1 = new LinkedList<>();
+        for(int i=1;i<=n;i++)
+        {
+            if (i%3==0 && i%5==0)
+            {
+                list1.add("FizzBuzz");
+            } else if (i%3==0)
+            {
+                list1.add("Fizz");
+            } 
+            else if (i%5==0)
+            {
+                list1.add("Buzz");
+            }
+            else
+            {
+                list1.add(String.valueOf(i));
+            }
+        }
+        return list1;
+        
+    }
+}
